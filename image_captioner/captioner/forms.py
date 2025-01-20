@@ -9,6 +9,7 @@ class CaptionForm(forms.ModelForm):
         ('Twitter', 'Twitter'),
         ('LinkedIn', 'LinkedIn'),
         ('Pinterest', 'Pinterest'),
+        ('Whatsapp','Whatsapp'),
     ]
     
     NUMBER_CHOICES = [(i, str(i)) for i in range(1, 11)]
