@@ -1,0 +1,271 @@
+/* static/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.caption-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated Title */
+.app-title {
+    text-align: center;
+    color: #2d3436;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-title span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.app-title:hover span {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* File Upload Styling */
+.file-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+    border-color: #4CAF50;
+    background: #f1f8e9;
+}
+
+.upload-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-name {
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Form Elements */
+.caption-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: 500;
+    color: #2d3436;
+}
+
+select {
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    appearance: none;
+    background: white url("data:image/svg+xml,...") no-repeat right 12px center;
+}
+
+select:hover, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Generate Button */
+.generate-btn {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.generate-btn:hover .btn-icon {
+    transform: rotate(360deg);
+}
+
+/* Image Preview */
+.image-preview {
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Captions Results */
+.captions-result {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.captions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.caption-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.caption-item p {
+    margin: 0;
+    flex: 1;
+}
+
+/* Copy Button */
+.copy-btn {
+    background: #e9ecef;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.copy-btn:hover {
+    background: #dee2e6;
+    transform: translateY(-1px);
+}
+
+.copy-icon {
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .caption-container {
+        padding: 20px;
+    }
+    
+    .app-title {
+        font-size: 2em;
+    }
+    
+    .generate-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    .caption-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .copy-btn {
+        align-self: stretch;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-title {
+        font-size: 1.5em;
+    }
+    
+    .file-upload-label {
+        padding: 15px;
+    }
+    
+    .upload-icon {
+        font-size: 1.5em;
+    }
+}
+
+/* Add these to your existing CSS */
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ffcdd2;
+}
+
+.generate-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.generate-btn:disabled:hover {
+    box-shadow: none;
+    transform: none;
+}
